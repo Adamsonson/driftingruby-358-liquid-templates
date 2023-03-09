@@ -53,6 +53,6 @@ class MailTemplatesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def mail_template_params
-      params.require(:mail_template).permit(:name, :subject)
+      params.require(:mail_template).permit(:name, :subject, :content)
     end
 end
