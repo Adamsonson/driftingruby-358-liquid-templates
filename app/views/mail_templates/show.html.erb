@@ -1,0 +1,9 @@
+<%= render @mail_template %>
+
+<div>
+  <%= link_to "Edit", edit_mail_template_path(@mail_template) %> |
+  <%= link_to "Destroy", mail_template_path(@mail_template),
+    "data-turbo-method": :delete,
+    "data-turbo-confirm": "Are you sure?" %> |
+  <%= link_to "Back to mail templates", mail_templates_path %>
+</div>
