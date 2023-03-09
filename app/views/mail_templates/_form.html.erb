@@ -23,7 +23,7 @@
   <%= content_tag :div, class: 'mb-3',
     "data-controller": "previewer" do %>
     <%= form.label :content, class: 'form-label' %>
-    <%= form.rich_text_area :content, class: 'form-control' %>
+    <%= form.rich_text_area :content, class: 'form-control mb-3', "data-previewer-target": "input" %>
 
     <div class="card mb-3">
       <div class="card-body">
