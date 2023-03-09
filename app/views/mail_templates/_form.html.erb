@@ -20,10 +20,31 @@
     <%= form.text_field :subject, class: 'form-control' %>
   </div>
 
-  <div class="mb-3">
+  <%= content_tag :div, class: 'mb-3',
+    "data-controller": "previewer" do %>
     <%= form.label :content, class: 'form-label' %>
     <%= form.rich_text_area :content, class: 'form-control' %>
-  </div>
+
+    <div class="card mb-3">
+      <div class="card-body">
+        <div data-previewer-target="output"></div>
+      </div>
+    </div>
+
+    <div class="card mb-3">
+      <div class="card-body">
+        <div>Available Variables</div>
+        <div>Posts</div>
+        <ul>
+          <li>Title - {{ post_title }}</li>
+        </ul>
+        <div>Extras</div>
+        <ul>
+          <li>Random Number - {{ example_number }}</li>
+        </ul>
+      </div>
+    </div>
+  <% end %>
 
   <div class="actions">
     <%= form.submit class: 'btn btn-primary' %>
