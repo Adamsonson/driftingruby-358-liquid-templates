@@ -21,7 +21,9 @@
   </div>
 
   <%= content_tag :div, class: 'mb-3',
-    "data-controller": "previewer" do %>
+    "data-controller": "previewer",
+    "data-previewer-url-value": previewer_path do %>
+
     <%= form.label :content, class: 'form-label' %>
     <%= form.rich_text_area :content, class: 'form-control mb-3', "data-previewer-target": "input" %>
 
